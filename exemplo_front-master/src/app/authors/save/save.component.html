@@ -1,0 +1,17 @@
+<form>
+    <label>
+      First Name: 
+      <input type="text" name="first_name" [(ngModel)]="author.first_name" />
+    </label>
+    <label>
+        Last Name: 
+        <input type="text" name="last_name" [(ngModel)]="author.last_name" />
+    </label>
+    <div>
+      <p>Valor first_name: {{author.first_name}}</p>
+    </div>
+    <div class="actions">
+      <button (click)="submit()">Salvar</button>
+      <button>Voltar</button>
+    </div>
+  </form>

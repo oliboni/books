@@ -1,0 +1,21 @@
+<div>
+  <a routerLink="/authors/save">New Author</a>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let author of authors">
+      <td>{{author.id}}</td>
+      <td>{{author.first_name}}</td>
+      <td>{{author.last_name}}</td>
+    </tr>
+  </tbody>
+
+</table>
