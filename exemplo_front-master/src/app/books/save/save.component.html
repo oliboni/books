@@ -1,0 +1,18 @@
+<form>
+  <label>
+    Title:
+    <input type="text" name="title" [(ngModel)]="book.title" >
+  </label>
+  <label>
+    ISBN:
+    <input type="text" name="isbn" [(ngModel)]="book.issn" >
+  </label>
+  <label>
+    ID Author:
+    <input type="number" name="idAuthor" [(ngModel)]="book.id_author">
+  </label>
+  <div class="action">
+    <button (click)="submit()">Salvar</button>
+    <button>Voltar</button>
+  </div>
+</form>
