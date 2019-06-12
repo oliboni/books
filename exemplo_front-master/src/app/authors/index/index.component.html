@@ -4,19 +4,38 @@
 
 <table>
   <thead>
-    <tr>
-      <th>ID</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-    </tr>
+  <tr>
+    <th>ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+  </tr>
   </thead>
+
   <tbody>
-    <tr *ngFor="let author of authors">
+    <tr *ngFor="let author of authors; let key = index">
       <td>{{author.id}}</td>
       <td>{{author.first_name}}</td>
       <td>{{author.last_name}}</td>
-      <td><a href></a></td>
-    </tr>
+      <td><a (click)="setBooks(author.Books)">Livros</a></td>
+      <td><a href="/authors/save/{{author.id}}">Editar</a></td>
+    <td><a (click)="delete(author.id, key)">Excluir</a></td>
   </tbody>
 
+</table>
+
+<table *ngIf="books.length > 0">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>issn</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let book of books">
+    <td>{{book.id}}</td>
+    <td>{{book.title}}</td>
+    <td>{{book.issn}}</td>
+  </tr>
+  </tbody>
 </table>
